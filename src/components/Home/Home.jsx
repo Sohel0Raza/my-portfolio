@@ -6,7 +6,7 @@ import Skills from "./Skills";
 
 const Home = () => {
     return (
-        <div>
+        <div className="md:w-10/12 mx-auto">
             <Banner />
             <MyService/>
             <Skills/>

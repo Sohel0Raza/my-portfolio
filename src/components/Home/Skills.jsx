@@ -28,7 +28,7 @@ const Skills = () => {
     }, []);
     return (
         <div id="skills">
-            <h2 className="md:w-10/12 mx-auto font-mono font-bold text-4xl my-10 pb-2 px-10 md:px-0">My Skills</h2>
+            <h2 className="w-full font-mono font-bold text-4xl my-10 pb-2 px-10 md:px-0">My Skills</h2>
             <div className="md:w-7/12 mx-auto">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-10 mb-10 px-10 md:px-0">
                     <Tilt transitionSpeed={2500}>
@@ -125,8 +125,8 @@ const Skills = () => {
                     </Tilt>
                 </div>
             </div>
-            <div className="text-center md:w-10/12 md:mx-auto mb-10 hidden md:block">
-                <h2 className="font-mono font-bold text-2xl my-10 border-b-2 border-[#dbd364] rounded-xl mx-10 md:mx-0 pb-2">Tools</h2>
+            <div className="text-center md:w-10/12 md:mx-auto mb-10">
+                <h2 className="font-mono font-bold text-2xl my-10 border-b-2 border-[#88A6A3] rounded-xl mx-10 md:mx-0 pb-2">Tools</h2>
                 <Marquee>
                 <div className="flex justify-center items-center md:grid md:grid-cols-8 md:gap-x-16 gap-x-10 px-10 md:px-0">
                     <div className="mx-auto ">

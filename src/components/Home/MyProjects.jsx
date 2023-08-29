@@ -11,7 +11,7 @@ const MyProjects = () => {
     const [flip2, setFlip2] = useState(false);
     const [flip3, setFlip3] = useState(false);
     return (
-        <div id="projects" className="md:w-10/12 mx-auto my-10">
+        <div id="projects" className="w-full my-10">
             <h2 className="font-mono font-bold text-4xl my-10 pb-2 px-10 md:px-0">My Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div className="card shadow-2xl shadow-[#557A08] mx-8 md:mx-0">

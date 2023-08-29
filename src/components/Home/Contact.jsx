@@ -27,7 +27,7 @@ const Contact = () => {
     };
     return (
         <div id="contact">
-            <div className="md:w-10/12 mx-auto mt-14 md:mt-20">
+            <div className="w-full mt-14 md:mt-20">
                 <div className=" pb-50 px-10 md:px-0">
                     <h2 className="font-mono font-bold text-4xl mb-5">Contact Me</h2>
                     <p>Let's talk how I can help you to grow your business. I appreciate any kind of suggestions or feedback.</p>
@@ -36,7 +36,7 @@ const Contact = () => {
                     <div data-aos="fade-right" data-aos-duration="2000" className="px-10 md:px-0">
                         <div className="flex items-center">
                             <div>
-                                <AiFillPhone className="text-4xl p-2 shadow-2xl bg-[#dbd364] rounded-full text-white" />
+                                <AiFillPhone className="text-4xl p-2 shadow-2xl bg-[#88A6A3] rounded-full text-white" />
                             </div>
                             <div className="ml-5">
                                 <h2 className="text-2xl font-bold">Phone</h2>
@@ -45,7 +45,7 @@ const Contact = () => {
                         </div>
                         <div className="flex items-center mt-5">
                             <div>
-                                <MdEmail className="text-4xl p-2 shadow-2xl bg-[#dbd364] rounded-full text-white" />
+                                <MdEmail className="text-4xl p-2 shadow-2xl bg-[#88A6A3] rounded-full text-white" />
                             </div>
                             <div className="ml-5">
                                 <h2 className="text-2xl font-bold">Email</h2>
@@ -54,7 +54,7 @@ const Contact = () => {
                         </div>
                         <div className="flex items-center my-5">
                             <div>
-                                <MdLocationOn className="text-4xl p-2 shadow-2xl bg-[#dbd364] rounded-full text-white" />
+                                <MdLocationOn className="text-4xl p-2 shadow-2xl bg-[#88A6A3] rounded-full text-white" />
                             </div>
                             <div className="ml-5">
                                 <h2 className="text-2xl font-bold">Location</h2>
@@ -62,9 +62,9 @@ const Contact = () => {
                             </div>
                         </div>
                         <div className="flex items-center ml-16 space-x-4 mt-5">
-                            <a href="https://github.com/Sohel0Raza"><BsGithub className="shadow-2xl rounded-full text-4xl border-2 p-1" /></a>
-                            <a href="https://www.linkedin.com/in/sohel-raza-361640282/"><BsLinkedin className="shadow-2xl rounded-full text-4xl border-2 p-1" /></a>
-                            <a href="https://www.facebook.com/Mou.Himu12/"><BsFacebook className="shadow-2xl rounded-full text-4xl border-2 p-1" /></a>
+                            <a href="https://github.com/Sohel0Raza"><BsGithub className="shadow-2xl rounded-full text-4xl border-2 border-[#63616f]  p-1" /></a>
+                            <a href="https://www.linkedin.com/in/sohel-raza-361640282/"><BsLinkedin className="shadow-2xl rounded-full text-4xl border-2 border-[#63616f] p-1" /></a>
+                            <a href="https://www.facebook.com/Mou.Himu12/"><BsFacebook className="shadow-2xl rounded-full text-4xl border-2 border-[#63616f] p-1" /></a>
                         </div>
                     </div>
                     <div data-aos="fade-left" data-aos-duration="2000" className="w-full md:ml-20 px-5 md:px-0">
