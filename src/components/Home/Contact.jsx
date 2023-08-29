@@ -27,7 +27,7 @@ const Contact = () => {
     };
     return (
         <div id="contact">
-            <div className="md:w-10/12 mx-auto mt-10 md:mt-20">
+            <div className="md:w-10/12 mx-auto mt-14 md:mt-20">
                 <div className=" pb-50 px-10 md:px-0">
                     <h2 className="font-mono font-bold text-4xl mb-5">Contact Me</h2>
                     <p>Let's talk how I can help you to grow your business. I appreciate any kind of suggestions or feedback.</p>

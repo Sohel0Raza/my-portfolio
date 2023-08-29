@@ -11,13 +11,13 @@
 }
 
 .btn-primary {
-    @apply font-medium transition duration-200 shadow-2xl my-2 md:mb-0 px-3 py-1 md:px-4 md:py-2 rounded text-gray-700 hover:text-white bg-[#dbd364] hover:bg-[#838BD6] border-2 border-[#dbd364] hover:border-transparent
+    @apply font-medium transition duration-200 shadow-2xl my-3 md:mb-0 px-3 py-1 md:px-4 md:py-2 rounded text-gray-700 hover:text-white bg-[#dbd364] hover:bg-[#E0C6F5] border-2 border-[#dbd364] hover:border-transparent
 } 
 .btn-secondary {
     @apply text-yellow-100 hover:text-sky-100 font-serif transition duration-200 shadow-2xl my-2 md:mb-0 px-2 md:px-4 py-1 rounded-l-full bg-[#838BD6] hover:bg-[#dbd364]
 } 
 .btn-outlined {
-    @apply font-medium transition duration-200 shadow-2xl my-2 md:mb-0 px-3 py-1 md:px-4 md:py-2 rounded hover:bg-[#838BD6] hover:border-transparent border-2 border-[#838BD6] text-gray-700 hover:text-white
+    @apply font-medium transition duration-200 shadow-2xl my-3 md:mb-0 px-3 py-1 md:px-4 md:py-2 rounded hover:bg-[#E0C6F5] hover:border-transparent border-2 border-[#E0C6F5] text-gray-700 hover:text-white
 }
 .btn-client{
     @apply text-[#838BD6] border-[1px] border-[#838BD6] font-normal shadow-2xl rounded-full px-2 hover:bg-slate-100 hover:border-transparent

@@ -125,10 +125,10 @@ const Skills = () => {
                     </Tilt>
                 </div>
             </div>
-            <div className="text-center md:w-10/12 mx-auto mb-10">
+            <div className="text-center md:w-10/12 md:mx-auto mb-10 hidden md:block">
                 <h2 className="font-mono font-bold text-2xl my-10 border-b-2 border-[#dbd364] rounded-xl mx-10 md:mx-0 pb-2">Tools</h2>
                 <Marquee>
-                <div className="grid grid-cols-8 gap-x-16 mx-10 md:mx-0">
+                <div className="flex justify-center items-center md:grid md:grid-cols-8 md:gap-x-16 gap-x-10 px-10 md:px-0">
                     <div className="mx-auto ">
                         <img className="h-12" src={Logo1} alt="" />
                         <div>
