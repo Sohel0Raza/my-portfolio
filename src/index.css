@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
 
 .active {
     @apply tracking-wide text-green-700 transition-colors duration-200
@@ -11,21 +16,34 @@
 }
 
 .btn-primary {
-    @apply font-medium transition duration-200 shadow-2xl my-3 md:mb-0 px-3 py-1 md:px-4 md:py-2 rounded hover:text-white bg-[#01754F] hover:bg-[#38cb9a] border-2 border-[#01754F] text-white hover:border-transparent
+    @apply font-medium transition duration-200 shadow-2xl my-3 md:mb-0 px-3 py-1 md:px-4 md:py-2 rounded hover:text-white bg-[#e63946] active:bg-[#2e0c0f] hover:bg-[#df5c67] border-2 border-[#e63946] text-white hover:border-transparent
 } 
+
 .btn-secondary {
-    @apply text-yellow-100 hover:text-sky-100 font-serif transition duration-200 shadow-2xl my-2 md:mb-0 px-2 md:px-4 py-1 rounded-l-full bg-[#38cb9a] hover:bg-[#01754F]
-} 
-.btn-outlined {
-    @apply font-medium transition duration-200 shadow-2xl my-3 md:mb-0 px-3 py-1 md:px-4 md:py-2 rounded hover:bg-[#38cb9a] hover:border-transparent border-2 border-[#01754F] text-gray-700 hover:text-white
+    @apply text-yellow-100 hover:text-sky-100 font-serif transition duration-200 shadow-2xl my-2 md:mb-0 px-2 md:px-4 py-1 rounded-l-full bg-[#1234] hover:bg-[#a861df]
 }
+
+.btn-outlined {
+    @apply font-medium transition duration-200 shadow-2xl my-3 md:mb-0 px-3 py-1 md:px-4 md:py-2 rounded hover:bg-[#1d3557] active:bg-[#5d6ac2] hover:border-transparent border-2 border-[#1d3557] hover:text-white
+}
+
 .btn-client{
     @apply text-[#838BD6] border-[1px] border-[#838BD6] font-normal shadow-2xl rounded-full px-2 hover:bg-slate-100 hover:border-transparent
 }
+
 .btn-server{
-    @apply text-[#01754F] border-[1px] border-[#01754F] font-normal shadow-2xl rounded-full px-2 hover:bg-zinc-100 hover:border-transparent
+    @apply text-[#a861df] border-[1px] border-[#4a4e69] font-normal shadow-2xl rounded-full px-2 hover:bg-zinc-100 hover:border-transparent
 }
+
 .btn-live{
     @apply text-[#db64bb] border-[1px] border-[#db64bb] font-normal shadow-2xl rounded-full px-2 hover:bg-slate-100 hover:border-transparent
+}
+
+.myInput{
+    @apply outline-0 py-2 text-[18px] bg-transparent border-b-2 border-[#16345c] mb-3
+}
+
+.myLabel{
+    @apply absolute top-[-20px] left-[8px] text-lg font-normal 
 }
 

@@ -29,106 +29,106 @@ const Skills = () => {
     return (
         <div id="skills">
             <h2 className="w-full font-mono font-bold text-4xl my-10 pb-2 px-10 md:px-0">My Skills</h2>
-            <div className="md:w-7/12 mx-auto">
+            <div className="md:w-7/12 mx-auto text-black">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-10 mb-10 px-10 md:px-0">
                     <Tilt transitionSpeed={2500}>
-                        <div className="tilt-scale card bg-base-100 shadow-lg shadow-orange-700 hover:bg-orange-100">
+                        <div className="tilt-scale card bg-base-100 shadow-lg shadow-orange-700 hover:bg-[#fdba74] hover:text-white">
                             <div className="header">
                                 <figure className="px-5 pt-5">
                                     <img src={htmlLogo} alt="htmlLogo" className="rounded-xl" />
                                 </figure>
                                 <div className="card-body p-3 items-center text-center">
-                                    <h2 className="card-title">HTML</h2>
+                                    <h2 className="text-base font-semibold">HTML</h2>
                                 </div>
                             </div>
                         </div>
                     </Tilt>
                     <Tilt transitionSpeed={2500}>
-                        <div className="card bg-base-100 shadow-xl shadow-[#669db8] hover:bg-[#9dc2d5]">
+                        <div className="card bg-base-100 shadow-xl shadow-[#669db8] hover:bg-[#9dc2d5] hover:text-white">
                             <figure className="px-5 pt-5">
                                 <img src={cssLogo} alt="htmlLogo" className="rounded-xl" />
                             </figure>
                             <div className="card-body p-3 items-center text-center">
-                                <h2 className="card-title">CSS</h2>
+                                <h2 className="text-base font-semibold">CSS</h2>
                             </div>
                         </div>
                     </Tilt>
                     <Tilt transitionSpeed={2500}>
-                        <div className="card bg-base-100 shadow-xl shadow-[#73599f] hover:bg-[#b0a1cb]">
+                        <div className="card bg-base-100 shadow-xl shadow-[#73599f] hover:bg-[#b0a1cb] hover:text-white">
                             <figure className="px-5 pt-5">
                                 <img src={bootstrapLogo} alt="htmlLogo" className="rounded-xl" />
                             </figure>
                             <div className="card-body p-3 items-center text-center">
-                                <h2 className="card-title">Bootstrap</h2>
+                                <h2 className="text-base font-semibold">Bootstrap</h2>
                             </div>
                         </div>
                     </Tilt>
                     <Tilt transitionSpeed={2500}>
-                        <div className="card bg-base-100 shadow-xl shadow-[#50919a] hover:bg-[#acd6dc]">
+                        <div className="card bg-base-100 shadow-xl shadow-[#50919a] hover:bg-[#acd6dc] hover:text-white">
                             <figure className="px-5 pt-5">
                                 <img src={tailwindLogo} alt="htmlLogo" className="rounded-xl" />
                             </figure>
                             <div className="card-body p-3 items-center text-center">
-                                <h2 className="card-title">Tailwind</h2>
+                                <h2 className="text-base font-semibold">Tailwind</h2>
                             </div>
                         </div>
                     </Tilt>
                     <Tilt transitionSpeed={2500}>
-                        <div className="card bg-base-100 shadow-xl shadow-[#cebc62] hover:bg-[#e9dc98]">
+                        <div className="card bg-base-100 shadow-xl shadow-[#cebc62] hover:bg-[#e9dc98] hover:text-white">
                             <figure className="px-5 pt-5">
                                 <img src={javaScriptLogo} alt="htmlLogo" className="rounded-xl" />
                             </figure>
                             <div className="card-body p-3 items-center text-center">
-                                <h2 className="card-title">JavaScript</h2>
+                                <h2 className="text-base font-semibold">JavaScript</h2>
                             </div>
                         </div>
                     </Tilt>
                     <Tilt transitionSpeed={2500}>
-                        <div className="card bg-base-100 shadow-xl shadow-[#87E0EA] hover:bg-[#ffb4a5] hover:shadow-[#e38b79]">
+                        <div className="card bg-base-100 shadow-xl shadow-[#87E0EA] hover:bg-[#ffb4a5] hover:shadow-[#e38b79] hover:text-white">
                             <figure className="px-5 pt-5">
                                 <img src={reactLogo} alt="htmlLogo" className="rounded-xl" />
                             </figure>
                             <div className="card-body p-3 items-center text-center">
-                                <h2 className="card-title">React JS</h2>
+                                <h2 className="text-base font-semibold">React JS</h2>
                             </div>
                         </div>
                     </Tilt>
                     <Tilt transitionSpeed={2500}>
-                        <div className="card bg-base-100 shadow-xl shadow-[#5aa35c] hover:bg-[#ace7ae]">
+                        <div className="card bg-base-100 shadow-xl shadow-[#5aa35c] hover:bg-[#ace7ae] hover:text-white">
                             <figure className="px-5 pt-5">
                                 <img src={nodeJSLogo} alt="htmlLogo" className="rounded-xl" />
                             </figure>
                             <div className="card-body p-3 items-center text-center">
-                                <h2 className="card-title">Node JS</h2>
+                                <h2 className="text-base font-semibold">Node JS</h2>
                             </div>
                         </div>
                     </Tilt>
                     <Tilt transitionSpeed={2500}>
-                        <div className="card bg-base-100 shadow-xl shadow-[#525252] hover:bg-[#acd7e7] hover:shadow-[#5b8899]">
+                        <div className="card bg-base-100 shadow-xl shadow-[#525252] hover:bg-[#acd7e7] hover:shadow-[#5b8899] hover:text-white">
                             <figure className="px-5 pt-5">
                                 <img src={expressJSLogo} alt="htmlLogo" className="rounded-xl" />
                             </figure>
                             <div className="card-body p-3 items-center text-center">
-                                <h2 className="card-title">Express JS</h2>
+                                <h2 className="text-base font-semibold">Express JS</h2>
                             </div>
                         </div>
                     </Tilt>
                     <Tilt transitionSpeed={2500}>
-                        <div className="card bg-base-100 shadow-xl shadow-[#4CAF50] hover:bg-[#599e5b]">
+                        <div className="card bg-base-100 shadow-xl shadow-[#4CAF50] hover:bg-[#599e5b] hover:text-white">
                             <figure className="px-5 pt-5">
                                 <img src={mongodbLogo} alt="htmlLogo" className="rounded-xl" />
                             </figure>
                             <div className="card-body p-3 items-center text-center">
-                                <h2 className="card-title">MongoDB</h2>
+                                <h2 className="text-base font-semibold">MongoDB</h2>
                             </div>
                         </div>
                     </Tilt>
                 </div>
             </div>
-            <div className="text-center md:w-10/12 md:mx-auto mb-10">
-                <h2 className="font-mono font-bold text-2xl my-10 border-b-2 border-[#88A6A3] rounded-xl mx-10 md:mx-0 pb-2">Tools</h2>
+            <div className="text-center md:w-full md:mx-auto mb-10">
+                <h2 className="font-mono font-bold text-2xl my-10 border-b-2 border-[#1d3557] rounded-xl mx-10 md:mx-0 pb-2">Tools</h2>
                 <Marquee>
-                <div className="flex justify-center items-center md:grid md:grid-cols-8 md:gap-x-16 gap-x-10 px-10 md:px-0">
+                <div className="flex justify-center items-center md:grid md:grid-cols-8 md:gap-x-16 gap-x-10 px-10 md:px-0 text-center">
                     <div className="mx-auto ">
                         <img className="h-12" src={Logo1} alt="" />
                         <div>
@@ -171,7 +171,7 @@ const Skills = () => {
                             <h2 className="font-bold">Dev Tools</h2>
                         </div>
                     </div>
-                    <div className="mx-auto">
+                    <div className="md:mr-14">
                         <img className="h-12" src={Logo7} alt="" />
                         <div>
                             <h2 className="font-bold">Vercel</h2>
