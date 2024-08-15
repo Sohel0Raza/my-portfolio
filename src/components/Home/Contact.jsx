@@ -35,7 +35,7 @@ const Contact = () => {
       );
   };
   return (
-    <div id="contact">
+    <div id="contactSection">
       <div className="w-full mt-14 md:mt-20 py-10">
         <div className=" pb-50 px-10 md:px-0">
           <h2 className="font-mono font-bold text-4xl mb-5">Contact Me</h2>
@@ -103,7 +103,7 @@ const Contact = () => {
             <form
               ref={form}
               onSubmit={sendEmail}
-              className="w-3/5 mx-auto mt-12 bg-black/5 py-5 px-10 rounded-md"
+              className="w-3/5 mx-auto mt-12 bg-black/5 py-7 px-10 rounded-md"
             >
               <div className="form-control relative my-5">
                 <input type="text" name="name" required className="myInput" />

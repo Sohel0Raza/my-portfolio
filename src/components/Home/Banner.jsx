@@ -31,8 +31,12 @@ const Banner = () => {
         <div className="flex text-[#e7f3f0] md:flex-col items-center justify-between my-6 md:my-0 mx-10 md:mx-0 px-7 md:px-3 py-3 md:py-0 space-x-8 md:space-x-0 md:space-y-8 rounded-lg bg-gradient-to-t from-[#df5c67] to-[#1d3557]">
           <p className="text-2xl md:mt-6">
             <button onClick={darkModeHandler}>
-              <span data-tip="Dark" className="tooltip">{dark && <IoMoon />}</span>
-              <span data-tip="Light" className="tooltip">{!dark && <FiSun />}</span>
+              <span data-tip="Dark" className="tooltip">
+                {dark && <IoMoon />}
+              </span>
+              <span data-tip="Light" className="tooltip">
+                {!dark && <FiSun />}
+              </span>
             </button>
           </p>
           <a data-tip="Home" className="tooltip text-2xl md:mt-2" href="#home">
@@ -50,7 +54,7 @@ const Banner = () => {
           <a
             data-tip="Contact"
             className="tooltip text-2xl md:pb-5"
-            href="#contact"
+            href="#contactSection"
           >
             <BiSolidContact />
           </a>
@@ -89,9 +93,11 @@ const Banner = () => {
               <BsDownload className="ml-2" />
             </a>
           </button>
-          <button className="btn-primary flex items-center">
-            Let's Talk
-            <BsTelephone className="ml-2" />
+          <button className="btn-primary">
+            <a className="flex items-center" href="#contactSection">
+              Let's Talk
+              <BsTelephone className="ml-2" />
+            </a>
           </button>
         </div>
       </div>

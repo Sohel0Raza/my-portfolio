@@ -40,10 +40,10 @@ body{
 }
 
 .myInput{
-    @apply outline-0 py-2 text-[18px] bg-transparent border-b-2 border-[#16345c] mb-3
+    @apply outline-0 py-2 text-[18px]  rounded-sm mb-3
 }
 
 .myLabel{
-    @apply absolute top-[-20px] left-[8px] text-lg font-normal 
+    @apply absolute top-[-30px] left-[4px] text-lg font-normal 
 }
 
