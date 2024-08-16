@@ -7,6 +7,7 @@ import { MdEmail, MdLocationOn } from "react-icons/md";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
+
 const Contact = () => {
   useEffect(() => {
     Aos.init();
