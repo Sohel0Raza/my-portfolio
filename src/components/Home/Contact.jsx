@@ -7,7 +7,6 @@ import { MdEmail, MdLocationOn } from "react-icons/md";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-
 const Contact = () => {
   useEffect(() => {
     Aos.init();
@@ -48,12 +47,12 @@ const Contact = () => {
         <div className="md:flex justify-between items-center">
           <div
             data-aos="fade-right"
-            data-aos-duration="2000"
+            data-aos-duration="1000"
             className="px-10 md:px-0"
           >
             <div className="flex items-center">
               <div>
-                <AiFillPhone className="text-4xl p-2 shadow-2xl bg-[#1d3557] rounded-full text-white" />
+                <AiFillPhone className="text-4xl p-2 shadow-inner shadow-black dark:shadow-white  rounded-full " />
               </div>
               <div className="ml-5">
                 <h2 className="text-2xl font-bold">Phone</h2>
@@ -64,7 +63,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center mt-5">
               <div>
-                <MdEmail className="text-4xl p-2 shadow-2xl bg-[#1d3557] rounded-full text-white" />
+                <MdEmail className="text-4xl p-2 shadow-inner shadow-black dark:shadow-white  rounded-full " />
               </div>
               <div className="ml-5">
                 <h2 className="text-2xl font-bold">Email</h2>
@@ -75,7 +74,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center my-5">
               <div>
-                <MdLocationOn className="text-4xl p-2 shadow-2xl bg-[#1d3557] rounded-full text-white" />
+                <MdLocationOn className="text-4xl p-2 shadow-inner shadow-black dark:shadow-white  rounded-full " />
               </div>
               <div className="ml-5">
                 <h2 className="text-2xl font-bold">Location</h2>
@@ -86,25 +85,25 @@ const Contact = () => {
             </div>
             <div className="flex items-center ml-16 space-x-4 mt-5">
               <a href="https://github.com/Sohel0Raza">
-                <BsGithub className="shadow-2xl rounded-full text-4xl border-2 border-[#1d3557]  p-1" />
+                <BsGithub className="shadow-inner shadow-black dark:shadow-white rounded-full text-4xl   p-2" />
               </a>
               <a href="https://www.linkedin.com/in/sohel-raza-361640282/">
-                <BsLinkedin className="shadow-2xl rounded-full text-4xl border-2 border-[#1d3557] p-1" />
+                <BsLinkedin className="shadow-inner shadow-black dark:shadow-white rounded-full text-4xl  p-2" />
               </a>
               <a href="https://www.facebook.com/Mou.Himu12/">
-                <BsFacebook className="shadow-2xl rounded-full text-4xl border-2 border-[#1d3557] p-1" />
+                <BsFacebook className="shadow-inner shadow-black dark:shadow-white rounded-full text-4xl  p-2" />
               </a>
             </div>
           </div>
           <div
             data-aos="fade-left"
-            data-aos-duration="2000"
-            className="w-full md:ml-20 px-5 md:px-0"
+            data-aos-duration="1000"
+            className="w-full md:ml-20 px-5 md:px-0 "
           >
             <form
               ref={form}
               onSubmit={sendEmail}
-              className="w-3/5 mx-auto mt-12 bg-black/5 py-7 px-10 rounded-md"
+              className="md:w-4/5 mx-auto mt-12 py-7 px-5 md:px-10 rounded-md "
             >
               <div className="form-control relative my-5">
                 <input type="text" name="name" required className="myInput" />

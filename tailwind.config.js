@@ -4,6 +4,9 @@ export default {
   darkMode: "class",
   theme: {
     extend: {},
+    shadows: {
+      "hblack":'rgba(0,0,0,,0)'
+    }
   },
   plugins: [require("daisyui")],
 };

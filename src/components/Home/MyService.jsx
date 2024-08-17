@@ -18,10 +18,10 @@ const MyService = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div
           data-aos="zoom-in-right"
-          data-aos-duration="3000"
-          className="text-center shadow-2xl p-7 rounded-md mx-8 md:mx-0 border-2 border-[#1d3557]"
+          data-aos-duration="1000"
+          className="text-center shadow-inner shadow-black dark:shadow-white  p-7 rounded-md mx-8 md:mx-0 "
         >
-          <MdDesignServices className="mx-auto text-5xl p-2 shadow-2xl bg-[#1d3557] rounded-full text-white" />
+          <MdDesignServices className="mx-auto text-5xl p-2  shadow-inner shadow-black dark:shadow-white  rounded-full " />
           <h4 className="text-2xl font-semibold p-2 mb-3">Web Development</h4>
           <p>
             I am a dedicated web developer passionate about creating outstanding
@@ -32,10 +32,10 @@ const MyService = () => {
         </div>
         <div
           data-aos="zoom-in-left"
-          data-aos-duration="3000"
-          className="text-center shadow-2xl p-7 rounded-md mx-8 md:mx-0 border-2 border-[#1d3557]"
+          data-aos-duration="1000"
+          className="text-center shadow-inner shadow-black dark:shadow-white  p-7 rounded-md mx-8 md:mx-0 "
         >
-          <BsPhoneFill className="mx-auto text-5xl p-2 shadow-2xl bg-[#1d3557] rounded-full text-white" />
+          <BsPhoneFill className="mx-auto text-5xl p-2  shadow-inner shadow-black dark:shadow-white  rounded-full " />
           <h4 className="text-2xl font-semibold p-2 mb-3">Responsive Design</h4>
           <p>
             I am a responsive designer who creates beautiful and easy-to-use
@@ -45,10 +45,10 @@ const MyService = () => {
         </div>
         <div
           data-aos="zoom-in-up"
-          data-aos-duration="1500"
-          className="text-center shadow-2xl p-7 rounded-md mx-8 md:mx-0 border-2 border-[#1d3557]"
+          data-aos-duration="1000"
+          className="text-center shadow-inner shadow-black dark:shadow-white  p-7 rounded-md mx-8 md:mx-0 "
         >
-          <FaBugSlash className="mx-auto text-5xl p-2 shadow-2xl bg-[#1d3557] rounded-full text-white" />
+          <FaBugSlash className="mx-auto text-5xl p-2  shadow-inner shadow-black dark:shadow-white  rounded-full " />
           <h4 className="text-2xl font-semibold p-2 mb-3">Bug Fixing</h4>
           <p>
             I am a meticulous website bug fixer specializing in identifying and
