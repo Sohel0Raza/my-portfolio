@@ -32,7 +32,7 @@ const SkillCard = ({ skill }) => {
         <div
           data-aos="zoom-in-down"
           data-aos-duration="1000"
-          className="tilt-scale card bg-base-100 shadow-inner shadow-black dark:shadow-white hover:opacity-60"
+          className="tilt-scale py-3 card dark:text-white shadow-inner shadow-black dark:shadow-white hover:opacity-60"
         >
           <div className="header">
             <div className="p-2 h-10 w-10 md:h-16 md:w-16 mx-auto my-auto">
@@ -42,14 +42,14 @@ const SkillCard = ({ skill }) => {
               <h2 className="text-xs font-normal md:text-base md:font-semibold ">
                 {name}
               </h2>
-              {/* <div className="flex items-center justify-between px-3 pb-3">
+              <div className="flex items-center justify-between px-3 pb-3">
                 <span className="mr-2 font-semibold ">{value}%</span>
                 <progress
                   className={`progress ${color}`}
                   value={value}
                   max="100"
                 ></progress>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>

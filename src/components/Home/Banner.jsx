@@ -44,42 +44,40 @@ const Banner = () => {
             isVisible ? "visible" : "invisible"
           }`}
         >
-          <div className=" bg-[#e63946] text-white text-2xl p-2 rounded-[50%] animate-bounce ">
-            <FaArrowDownLong></FaArrowDownLong>
-          </div>
+            <FaArrowDownLong className="text-white text-5xl p-2 rounded-[50%] animate-bounce shadow-inner bg-[#e63946] shadow-black dark:shadow-white"></FaArrowDownLong>
           <span className="text-[#e63946]">Scroll</span>
         </div>
       </ScrollTrigger>
       <div className="fixed z-40 -mt-24 md:-mt-0 md:-ml-20">
-        <div className="flex text-[#e7f3f0] md:flex-col items-center justify-between my-6 md:my-0 mx-5 md:mx-0 px-7 md:px-3 py-3 md:py-0 space-x-7 md:space-x-0 md:space-y-8 shadow-2xl rounded-lg bg-gradient-to-t from-[#df5c67] to-[#1d3557]">
+        <div className="flex text-[#e7f3f0] md:flex-col items-center justify-between my-6 md:my-0 mx-5 md:mx-0 py-3 md:py-0 space-x-7 md:space-x-0 md:space-y-6 px-2 shadow-2xl rounded-[2px] bg-gradient-to-t from-[#df5c67] to-[#1d3557]">
           <p className="text-2xl md:mt-6">
             <button onClick={darkModeHandler}>
               <span data-tip="Dark" className="tooltip">
-                {dark && <IoMoon />}
+                {dark && <IoMoon className="shadow-inner shadow-black dark:shadow-white text-[32px] p-[5px]"/>}
               </span>
               <span data-tip="Light" className="tooltip">
-                {!dark && <FiSun />}
+                {!dark && <FiSun className="shadow-inner shadow-black dark:shadow-white text-[32px] p-[5px]"/>}
               </span>
             </button>
           </p>
-          <a data-tip="Home" className="tooltip text-2xl md:mt-2" href="#home">
-            <AiFillHome />
+          <a data-tip="Home" className="tooltip" href="#home">
+            <AiFillHome className="shadow-inner shadow-black dark:shadow-white text-[32px] p-[5px]" />
           </a>
-          <a data-tip="Services" className="tooltip text-3xl" href="#services">
-            <MdHomeRepairService />
+          <a data-tip="Services" className="tooltip" href="#services">
+            <MdHomeRepairService className="shadow-inner shadow-black dark:shadow-white text-[32px] p-[5px]"/>
           </a>
-          <a data-tip="Skills" className="tooltip text-2xl" href="#skills">
-            <GiSkills />
+          <a data-tip="Skills" className="tooltip" href="#skills">
+            <GiSkills className="shadow-inner shadow-black dark:shadow-white text-[32px] p-[5px]" />
           </a>
-          <a data-tip="Projects" className="tooltip text-2xl" href="#projects">
-            <AiFillProject />
+          <a data-tip="Projects" className="tooltip" href="#projects">
+            <AiFillProject className="shadow-inner shadow-black dark:shadow-white text-[32px] p-[5px]"/>
           </a>
           <a
             data-tip="Contact"
             className="tooltip text-2xl md:pb-5"
             href="#contactSection"
           >
-            <BiSolidContact />
+            <BiSolidContact className="shadow-inner shadow-black dark:shadow-white text-[32px] p-[5px]"/>
           </a>
         </div>
       </div>
@@ -89,7 +87,7 @@ const Banner = () => {
         </h2>
         <div className="w-full">
           <TypeAnimation
-            className="text-3xl md:text-4xl font-bold font-mono text-[#457b9d]"
+            className="text-3xl md:text-4xl font-bold  font-mono text-[#457b9d]"
             sequence={[
               "Sohel Raza",
               1000,
