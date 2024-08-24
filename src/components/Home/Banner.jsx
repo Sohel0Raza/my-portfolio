@@ -16,7 +16,8 @@ import { GiSkills } from "react-icons/gi";
 import { FiSun } from "react-icons/fi";
 import resume from "../../../public/MERN Stack Web Developer CV of Sohel Raza.pdf";
 import ScrollTrigger from "react-scroll-trigger";
-import { FaArrowDownLong } from "react-icons/fa6";
+import { IoIosArrowRoundDown } from "react-icons/io";
+
 
 const Banner = () => {
   const [dark, setDark] = useState(false);
@@ -40,12 +41,12 @@ const Banner = () => {
     >
       <ScrollTrigger onEnter={onEnterViewport} onExit={onExitViewport}>
         <div
-          className={` fixed bottom-0 right-6 hidden md:block ${
+          className={` fixed text-center bottom-0 right-6 hidden md:block ${
             isVisible ? "visible" : "invisible"
           }`}
         >
-            <FaArrowDownLong className="text-white text-5xl p-2 rounded-[50%] animate-bounce shadow-inner bg-[#e63946] shadow-black dark:shadow-white"></FaArrowDownLong>
-          <span className="text-[#e63946]">Scroll</span>
+            <IoIosArrowRoundDown className="text-5xl ml-3 rounded-[50%] animate-bounce text-[#e63946]"></IoIosArrowRoundDown>
+          <span className="text-[#e63946] uppercase text-xs tracking-[5px]">Scroll</span>
         </div>
       </ScrollTrigger>
       <div className="fixed z-40 -mt-24 md:-mt-0 md:-ml-20">

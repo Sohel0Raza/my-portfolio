@@ -1,9 +1,11 @@
 import Tilt from "react-parallax-tilt";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Aos from "aos";
+import ReactCardFlip from "react-card-flip";
+
 const SkillCard = ({ skill }) => {
   const { name, image, skillLevel } = skill;
-  console.log("✌️skillLevel --->", skillLevel);
+  const [flipCard, setFlipCard] = useState(false);
 
   const getValueFromSkillLevele = (level) => {
     if (level == "Expert") {
@@ -28,32 +30,45 @@ const SkillCard = ({ skill }) => {
   }, []);
   return (
     <div>
-      <Tilt transitionSpeed={2500}>
-        <div
-          data-aos="zoom-in-down"
-          data-aos-duration="1000"
-          className="tilt-scale py-3 card dark:text-white shadow-inner shadow-black dark:shadow-white hover:opacity-60"
+      <div
+        data-aos="zoom-in-down"
+        data-aos-duration="1000"
+        className=" py-3 card dark:text-white shadow-inner shadow-black dark:shadow-white hover:opacity-60"
+      >
+        <ReactCardFlip
+          isFlipped={flipCard}
+          flipDirection="vertical"
+          containerClassName="transition-transform duration-2000 ease-in-out"
         >
-          <div className="header">
+          <div
+            onClick={() => setFlipCard(true)}
+            className="text-center cursor-pointer"
+          >
             <div className="p-2 h-10 w-10 md:h-16 md:w-16 mx-auto my-auto">
               <img src={image} alt="logo" className="rounded-xl w-full" />
             </div>
-            <div className="items-center text-center">
-              <h2 className="text-xs font-normal md:text-base md:font-semibold ">
-                {name}
-              </h2>
-              <div className="flex items-center justify-between px-3 pb-3">
-                <span className="mr-2 font-semibold ">{value}%</span>
-                <progress
-                  className={`progress ${color}`}
-                  value={value}
-                  max="100"
-                ></progress>
-              </div>
+            <h2 className="text-xs font-normal md:text-base md:font-semibold ">
+              {name}
+            </h2>
+          </div>
+          <div
+            onClick={() => setFlipCard(false)}
+            className="items-center text-center h-[88px] cursor-pointer"
+          >
+            <h2 className="text-xs pt-5 font-normal md:text-base md:font-semibold ">
+              {name}
+            </h2>
+            <div className="flex items-center justify-between px-3 pb-3">
+              <span className="mr-2 font-semibold ">{value}%</span>
+              <progress
+                className={`progress ${color}`}
+                value={value}
+                max="100"
+              ></progress>
             </div>
           </div>
-        </div>
-      </Tilt>
+        </ReactCardFlip>
+      </div>
     </div>
   );
 };
