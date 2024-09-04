@@ -4,7 +4,7 @@ import Home from "../components/Home/Home";
 
 const Main = () => {
     return (
-        <div className=" dark:bg-black dark:text-white">
+        <div className=" bg-[#212428] text-[#C4CFDE]">
             <div className="md:min-h-[calc(100vh-190px)]">
                 <Home/>
             </div>

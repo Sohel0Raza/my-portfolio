@@ -12,7 +12,7 @@ const MyProjects = () => {
     const [flip3, setFlip3] = useState(false);
     return (
         <div id="projects" className="w-full my-10">
-            <h2 className="font-mono font-bold text-4xl my-10 pb-2 px-10 md:px-0">My Projects</h2>
+            <h2 className="   font-bold text-4xl my-10 pb-2 px-10 md:px-0">My Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div className="card shadow-2xl shadow-[#557A08] mx-8 md:mx-0">
                     <ReactCardFlip isFlipped={flip1} flipDirection="vertical">
@@ -22,7 +22,7 @@ const MyProjects = () => {
                                 <button onClick={() => setFlip1(!flip1)} className="btn-secondary absolute top-1/2 right-8">View Details</button>
                             </div>
                             <div className="card-body">
-                                <h2 className="card-title font-mono">
+                                <h2 className="card-title   ">
                                     CampReunion
                                 </h2>
                                 <div className="card-actions justify-between mt-3">
@@ -59,7 +59,7 @@ const MyProjects = () => {
                                 <button onClick={() => setFlip2(!flip2)} className="btn-secondary absolute top-1/2 right-0">View Details</button>
                             </div>
                             <div className="card-body">
-                                <h2 className="card-title font-mono">
+                                <h2 className="card-title   ">
                                     ZooZest
                                 </h2>
                                 <div className="card-actions justify-between mt-3">
@@ -97,7 +97,7 @@ const MyProjects = () => {
                                 <button onClick={() => setFlip3(!flip3)} className="btn-secondary absolute top-1/2 right-0">View Details</button>
                             </div>
                             <div className="card-body">
-                                <h2 className="card-title font-mono">
+                                <h2 className="card-title   ">
                                 RecipeRiot
                                 </h2>
                                 <div className="card-actions justify-between mt-3">

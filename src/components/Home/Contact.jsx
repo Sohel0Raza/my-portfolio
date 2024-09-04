@@ -36,9 +36,9 @@ const Contact = () => {
   };
   return (
     <div id="contactSection">
-      <div className="w-full mt-14 md:mt-20 py-10">
+      <div className="w-full mt-14 md:mt-20 py-5">
         <div className=" pb-50 px-10 md:px-0">
-          <h2 className="font-mono font-bold text-4xl mb-5">Contact Me</h2>
+          <h2 className=" font-bold text-4xl mb-5">Contact Me</h2>
           <p>
             Let's talk how I can help you to grow your business. I appreciate
             any kind of suggestions or feedback.
@@ -52,46 +52,49 @@ const Contact = () => {
           >
             <div className="flex items-center">
               <div>
-                <AiFillPhone className="text-4xl p-2 shadow-inner shadow-black dark:shadow-white  rounded-full " />
+                <AiFillPhone className="myIcon" />
               </div>
               <div className="ml-5">
                 <h2 className="text-2xl font-bold">Phone</h2>
-                <p className="text-xl font-medium text-slate-600">
+                <p className="text-lg pt-2 font-medium text-[#EBECEC]">
                   +8801814881491
                 </p>
               </div>
             </div>
             <div className="flex items-center mt-5">
               <div>
-                <MdEmail className="text-4xl p-2 shadow-inner shadow-black dark:shadow-white  rounded-full " />
+                <MdEmail className="myIcon" />
               </div>
               <div className="ml-5">
                 <h2 className="text-2xl font-bold">Email</h2>
-                <p className="text-xl font-medium text-slate-600">
+                <p className="text-lg pt-2 font-medium text-[#EBECEC]">
                   soheldot1239@gmail.com
                 </p>
               </div>
             </div>
             <div className="flex items-center my-5">
               <div>
-                <MdLocationOn className="text-4xl p-2 shadow-inner shadow-black dark:shadow-white  rounded-full " />
+                <MdLocationOn className="myIcon" />
               </div>
               <div className="ml-5">
                 <h2 className="text-2xl font-bold">Location</h2>
-                <p className="text-xl font-medium text-slate-600">
+                <p className="text-lg pt-2 font-medium text-[#EBECEC]">
                   Dhaka, Bangladesh
                 </p>
               </div>
             </div>
-            <div className="flex items-center ml-16 space-x-4 mt-5">
-              <a href="https://github.com/Sohel0Raza">
-                <BsGithub className="shadow-inner shadow-black dark:shadow-white rounded-full text-4xl   p-2" />
+            <div className="flex items-cente justify-start space-x-4 pt-5">
+              <a href="https://github.com/Sohel0Raza" title="GitHub">
+                <BsGithub className="myIcon" />
               </a>
-              <a href="https://www.linkedin.com/in/sohel-raza-361640282/">
-                <BsLinkedin className="shadow-inner shadow-black dark:shadow-white rounded-full text-4xl  p-2" />
+              <a
+                href="https://www.linkedin.com/in/sohel-raza-361640282/"
+                title="Linkedin"
+              >
+                <BsLinkedin className="myIcon" />
               </a>
-              <a href="https://www.facebook.com/Mou.Himu12/">
-                <BsFacebook className="shadow-inner shadow-black dark:shadow-white rounded-full text-4xl  p-2" />
+              <a href="https://www.facebook.com/Mou.Himu12/" title="Facebook">
+                <BsFacebook className="myIcon" />
               </a>
             </div>
           </div>

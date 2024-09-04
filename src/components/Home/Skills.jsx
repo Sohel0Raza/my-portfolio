@@ -12,9 +12,7 @@ const Skills = () => {
   const backendSkill = skills?.filter(
     (skill) => skill.techTecnology == "Backend"
   );
-  const toolSkill = skills?.filter(
-    (skill) => skill.techTecnology == "Tool"
-  );
+  const toolSkill = skills?.filter((skill) => skill.techTecnology == "Tool");
   useEffect(() => {
     Aos.init();
 
@@ -25,34 +23,27 @@ const Skills = () => {
 
   return (
     <div id="skills">
-      <h2 className="w-full font-mono font-bold text-4xl my-5 pb-2 px-10 md:px-0">
+      <h1 className="w-full font-bold text-4xl my-5 pb-2 px-10 md:px-0">
         My Skills
-      </h2>
-      <div className=" text-black">
-        <h2 className="w-full font-mono font-bold text-2xl mb-3 pb-2 md:px-0">
-          Frontend Technonogies
+      </h1>
+      <div className="w-full">
+        <h2 className=" font-bold text-xl text-center text-primary mb-3 pb-2 md:px-0">
+          Technonogies
         </h2>
-        <div className="grid grid-cols-3 md:grid-cols-5 gap-10 mb-10 px-10 md:px-0">
+        <div className="grid grid-cols-3 md:grid-cols-7 gap-x-7 gap-y-3  mb-10 px-10 md:px-0">
           {frontendSkill?.map((skill) => (
             <SkillCard key={skill._id} skill={skill}></SkillCard>
           ))}
-        </div>
-      </div>
-      <div className=" text-black">
-        <h2 className="w-full font-mono font-bold text-2xl mb-3 pb-2 md:px-0">
-        Backend Technonogies
-        </h2>
-        <div className="grid grid-cols-3 md:grid-cols-5 gap-10 mb-10 px-10 md:px-0">
           {backendSkill?.map((skill) => (
             <SkillCard key={skill._id} skill={skill}></SkillCard>
           ))}
         </div>
       </div>
-      <div className=" text-black">
-        <h2 className="w-full font-mono font-bold text-2xl mb-3 pb-2 md:px-0">
+      <div className="">
+        <h2 className="w-full font-bold text-center text-xl mb-3 pb-2 md:px-0 text-primary">
           Tools
         </h2>
-        <div className="grid grid-cols-3 md:grid-cols-5 gap-10 mb-10 px-10 md:px-0">
+        <div className="grid grid-cols-3 md:grid-cols-7 gap-x-7 gap-y-3  mb-10 px-10 md:px-0">
           {toolSkill?.map((skill) => (
             <SkillCard key={skill._id} skill={skill}></SkillCard>
           ))}
