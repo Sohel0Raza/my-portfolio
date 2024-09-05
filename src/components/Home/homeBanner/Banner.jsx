@@ -7,12 +7,12 @@ import {
   BsLinkedin,
   BsTelephone,
 } from "react-icons/bs";
-
 import resume from "../../../../public/MERN Stack Web Developer CV of Sohel Raza.pdf";
-
 import "./banner.css";
 import { Scroll } from "../../utils/scroll";
+
 const Banner = () => {
+ 
   return (
     <div
       id="home"

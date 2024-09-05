@@ -11,7 +11,6 @@ const Contact = () => {
   useEffect(() => {
     Aos.init();
   }, []);
-
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -52,7 +51,7 @@ const Contact = () => {
           >
             <div className="flex items-center">
               <div>
-                <AiFillPhone className="icon" />
+                <AiFillPhone className="contact-icon" />
               </div>
               <div className="ml-5">
                 <h2 className="text-xl font-bold">Phone</h2>
@@ -63,7 +62,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center mt-5">
               <div>
-                <MdEmail className="icon" />
+                <MdEmail className="contact-icon" />
               </div>
               <div className="ml-5">
                 <h2 className="text-xl font-bold">Email</h2>
@@ -74,7 +73,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center my-5">
               <div>
-                <MdLocationOn className="icon" />
+                <MdLocationOn className="contact-icon" />
               </div>
               <div className="ml-5">
                 <h2 className="text-xl font-bold">Location</h2>
@@ -103,7 +102,9 @@ const Contact = () => {
             data-aos-duration="1000"
             className="w-full md:ml-40 px-5 md:px-0 shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e] mt-10 "
           >
-              <h2 className=" font-bold px-5 md:px-16 text-3xl py-7">Let's Work Together</h2>
+            <h2 className=" font-bold px-5 md:px-16 text-3xl py-7">
+              Let's Work Together
+            </h2>
             <form
               ref={form}
               onSubmit={sendEmail}
@@ -135,7 +136,7 @@ const Contact = () => {
                 <textarea
                   type="text"
                   name="message"
-                  rows="3" 
+                  rows="3"
                   cols="50"
                   required
                   className="myInput"

@@ -75,6 +75,6 @@ body {
   @apply bg-primary;
 }
 
-.icon {
+.contact-icon {
   @apply rounded-md text-5xl shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e] p-2 transition-all duration-700 ease-in-out hover:-translate-y-1;
 }

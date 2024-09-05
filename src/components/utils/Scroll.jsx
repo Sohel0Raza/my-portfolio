@@ -15,7 +15,7 @@ export const Scroll = () => {
     <>
       <ScrollTrigger onEnter={onEnterViewport} onExit={onExitViewport}>
         <div
-          className={` absolute text-center bottom-4 right-10 hidden md:block ${
+          className={` absolute text-center bottom-4 right-20 hidden md:block ${
             isVisible ? "visible" : "invisible"
           }`}
         >
