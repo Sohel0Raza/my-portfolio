@@ -1,4 +1,4 @@
-import Banner from "./Banner";
+import Banner from "./homeBanner/Banner";
 import Contact from "./Contact";
 import MyProjects from "./MyProjects";
 import MyService from "./MyService";

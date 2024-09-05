@@ -43,11 +43,26 @@ body {
 }
 
 .myInput {
-  @apply outline-0 p-2 text-base  rounded-sm mb-3 shadow-inner shadow-black dark:shadow-white;
+  @apply outline-0 p-[10px] text-base  rounded mb-3 border-b-[1px] border-[#2ea3c0] bg-transparent focus:border-[1px] focus:border-primary focus:bg-accent;
 }
 .myLabel {
-  @apply absolute top-[-30px] left-[4px] text-lg font-normal;
+  @apply absolute pointer-events-none left-0 text-base font-normal uppercase transition-all duration-500 top-2 px-[10px];
 }
+
+.myInput:focus ~ span , .myInput:valid ~span {
+  color: #2ea3c0;
+  transform:translateX(10px) translateY(-22px);
+  padding: 0 10px;
+  background: #212428;
+}
+.myIcon {
+  @apply rounded-full text-5xl shadow-inner shadow-black p-2 transition-all duration-700 ease-in-out hover:-translate-y-1;
+
+  background: linear-gradient(to left, #212428 50%, #ff014f 50%) right;
+  background-size: 200%;
+}
+
+
 .myIcon {
   @apply rounded-full text-4xl shadow-inner shadow-black p-2 transition-all duration-700 ease-in-out hover:-translate-y-1;
 
@@ -58,4 +73,8 @@ body {
 .myIcon:hover {
   background-position: left;
   @apply bg-primary;
+}
+
+.icon {
+  @apply rounded-md text-5xl shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e] p-2 transition-all duration-700 ease-in-out hover:-translate-y-1;
 }

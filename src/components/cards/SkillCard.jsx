@@ -6,15 +6,15 @@ const SkillCard = ({ skill }) => {
 
   const getValueFromSkillLevele = (level) => {
     if (level == "Expert") {
-      const value = 100;
+      const value = 95;
       const color = "text-[#C4CFDE]";
       return { value, color };
     } else if (level == "Intermediate") {
-      const value = 60;
+      const value = 70;
       const color = "text-warning";
       return { value, color };
     } else {
-      const value = 20;
+      const value = 30;
       const color = "text-error";
       return { value, color };
     }
@@ -33,7 +33,7 @@ const SkillCard = ({ skill }) => {
         className=" py-3 card rounded-none hover:opacity-60"
       >
         <div
-          className="text-center cursor-pointer shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e] rounded-xl p-4 hover:bg-[#181A1E]  hover:scale-105 transition-all duration-500"
+          className="text-center cursor-pointer hover:border-[1px] border-secondary shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e] rounded-xl p-4 hover:bg-[#181A1E]  hover:scale-105 transition-all duration-500"
         >
           <div className="h-10 w-10 md:h-16 md:w-16 mx-auto my-auto ">
             <img src={image} alt="logo" className="rounded-xl w-full" />

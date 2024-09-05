@@ -52,33 +52,33 @@ const Contact = () => {
           >
             <div className="flex items-center">
               <div>
-                <AiFillPhone className="myIcon" />
+                <AiFillPhone className="icon" />
               </div>
               <div className="ml-5">
-                <h2 className="text-2xl font-bold">Phone</h2>
-                <p className="text-lg pt-2 font-medium text-[#EBECEC]">
+                <h2 className="text-xl font-bold">Phone</h2>
+                <p className="text-base pt-2 font-medium text-[#EBECEC]">
                   +8801814881491
                 </p>
               </div>
             </div>
             <div className="flex items-center mt-5">
               <div>
-                <MdEmail className="myIcon" />
+                <MdEmail className="icon" />
               </div>
               <div className="ml-5">
-                <h2 className="text-2xl font-bold">Email</h2>
-                <p className="text-lg pt-2 font-medium text-[#EBECEC]">
+                <h2 className="text-xl font-bold">Email</h2>
+                <p className="text-base pt-2 font-medium text-[#EBECEC]">
                   soheldot1239@gmail.com
                 </p>
               </div>
             </div>
             <div className="flex items-center my-5">
               <div>
-                <MdLocationOn className="myIcon" />
+                <MdLocationOn className="icon" />
               </div>
               <div className="ml-5">
-                <h2 className="text-2xl font-bold">Location</h2>
-                <p className="text-lg pt-2 font-medium text-[#EBECEC]">
+                <h2 className="text-xl font-bold">Location</h2>
+                <p className="text-base pt-2 font-medium text-[#EBECEC]">
                   Dhaka, Bangladesh
                 </p>
               </div>
@@ -99,18 +99,19 @@ const Contact = () => {
             </div>
           </div>
           <div
-            data-aos="fade-left"
+            data-aos="fade-up"
             data-aos-duration="1000"
-            className="w-full md:ml-20 px-5 md:px-0 "
+            className="w-full md:ml-40 px-5 md:px-0 shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e] mt-10 "
           >
+              <h2 className=" font-bold px-5 md:px-16 text-3xl py-7">Let's Work Together</h2>
             <form
               ref={form}
               onSubmit={sendEmail}
-              className="md:w-4/5 mx-auto mt-12 py-7 px-5 md:px-10 rounded-md "
+              className=" pb-5 px-5 md:px-16 rounded-md "
             >
               <div className="form-control relative my-5">
                 <input type="text" name="name" required className="myInput" />
-                <label className="myLabel">Name</label>
+                <span className="myLabel">Your Name</span>
               </div>
               <div className="form-control relative mb-5">
                 <input
@@ -119,7 +120,7 @@ const Contact = () => {
                   required
                   className="myInput"
                 />
-                <label className="myLabel">Email</label>
+                <span className="myLabel">Your Email</span>
               </div>
               <div className="form-control relative mb-5">
                 <input
@@ -128,18 +129,20 @@ const Contact = () => {
                   required
                   className="myInput"
                 />
-                <label className="myLabel">Subject</label>
+                <span className="myLabel"> Subject</span>
               </div>
               <div className="form-control relative">
                 <textarea
                   type="text"
                   name="message"
+                  rows="3" 
+                  cols="50"
                   required
                   className="myInput"
                 />
-                <label className="myLabel">Message</label>
+                <span className="myLabel"> Message</span>
               </div>
-              <div className="form-control mt-6">
+              <div className="form-control py-3">
                 <input className="btn-primary" type="submit" value="Send" />
               </div>
             </form>

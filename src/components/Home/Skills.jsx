@@ -28,18 +28,25 @@ const Skills = () => {
       </h1>
       <div className="w-full">
         <h2 className=" font-bold text-xl text-center text-primary mb-3 pb-2 md:px-0">
-          Technonogies
+          Front-end Technonogies
         </h2>
         <div className="grid grid-cols-3 md:grid-cols-7 gap-x-7 gap-y-3  mb-10 px-10 md:px-0">
           {frontendSkill?.map((skill) => (
             <SkillCard key={skill._id} skill={skill}></SkillCard>
           ))}
+        </div>
+      </div>
+      <div className="w-full">
+        <h2 className=" font-bold text-xl text-center text-primary mb-3 pb-2 md:px-0">
+          Backend Technonogies
+        </h2>
+        <div className="grid grid-cols-3 md:grid-cols-7 gap-x-7 gap-y-3  mb-10 px-10 md:px-0">
           {backendSkill?.map((skill) => (
             <SkillCard key={skill._id} skill={skill}></SkillCard>
           ))}
         </div>
       </div>
-      <div className="">
+      <div className="w-full">
         <h2 className="w-full font-bold text-center text-xl mb-3 pb-2 md:px-0 text-primary">
           Tools
         </h2>

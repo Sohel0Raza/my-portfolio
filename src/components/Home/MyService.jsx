@@ -11,7 +11,7 @@ const MyService = () => {
     AOS.init();
   }, []);
   return (
-    <div id="services" className="w-full md:mt-10 md:mb-20">
+    <div id="services" className="w-full mt-10 md:mb-20">
       <h2 className="   font-bold text-4xl my-10 pb-2 px-10 md:px-0">
         My Services
       </h2>
