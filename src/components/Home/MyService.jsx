@@ -1,24 +1,25 @@
-import { MdOutlineDeveloperMode } from "react-icons/md";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { BiBug } from "react-icons/bi";
+import { FaCode } from "react-icons/fa";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Title from "../utils/Title";
 
 const MyService = () => {
   useEffect(() => {
     AOS.init();
   }, []);
   return (
-    <div id="services" className="w-full mt-10 md:mb-20">
-      <h2 className="   font-bold text-4xl my-10 pb-2 px-10 md:px-0">
-        My Services
-      </h2>
+    <section id="services" className="w-full py-5">
+     
+      <Title heading={"Services"} subHeading={"What I Do?"}></Title>
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div data-aos="fade-right" data-aos-duration="1000">
           <div className="service-card">
-            <MdOutlineDeveloperMode className="mx-auto text-6xl p-2 text-primary  rounded-full " />
+            <FaCode className="mx-auto text-6xl p-2 text-primary  rounded-full " />
             <h4 className="text-2xl font-semibold p-2 mb-3">Web Development</h4>
             <p>
               I am a dedicated web developer passionate about creating
@@ -57,7 +58,7 @@ const MyService = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

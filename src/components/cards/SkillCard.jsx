@@ -38,7 +38,7 @@ const SkillCard = ({ skill }) => {
           <div className="h-10 w-10 md:h-16 md:w-16 mx-auto my-auto ">
             <img src={image} alt="logo" className="rounded-xl w-full" />
           </div>
-            <p className="pt-3 font-bold text-xl">{value}%</p>
+            <p className="pt-3 font-bold md:text-xl">{value}%</p>
         </div>
           <h2 className={`text-xs font-normal text-center pt-3 md:text-base md:font-semibold ${color}`}>
             {name}

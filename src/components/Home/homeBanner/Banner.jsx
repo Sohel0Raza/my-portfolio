@@ -14,7 +14,7 @@ import { Scroll } from "../../utils/scroll";
 const Banner = () => {
  
   return (
-    <div
+    <section
       id="home"
       className="md:h-screen mx-auto md:flex md:justify-between md:items-center bg-[#212428]"
     >
@@ -87,7 +87,7 @@ const Banner = () => {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

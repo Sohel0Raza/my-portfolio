@@ -6,6 +6,7 @@ import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import Title from "../utils/Title";
 
 const Contact = () => {
   useEffect(() => {
@@ -34,22 +35,21 @@ const Contact = () => {
       );
   };
   return (
-    <div id="contactSection">
-      <div className="w-full mt-14 md:mt-20 py-5">
-        <div className=" pb-50 px-10 md:px-0">
-          <h2 className=" font-bold text-4xl mb-5">Contact Me</h2>
-          <p>
-            Let's talk how I can help you to grow your business. I appreciate
-            any kind of suggestions or feedback.
-          </p>
-        </div>
-        <div className="md:flex justify-between items-center">
+    <section id="contactSection">
+      <div className="w-full mt-14 py-5">
+        <Title heading={"Contact"} subHeading={"Get in Touch"}></Title>
+        <div className="md:flex justify-between">
+          
           <div
             data-aos="fade-right"
             data-aos-duration="1000"
             className="px-10 md:px-0"
           >
-            <div className="flex items-center">
+            <p className="pb-7">
+              Let's talk how I can help you to grow your business. I appreciate
+              any kind of suggestions or feedback.
+            </p>
+            <div className="flex items-center md:pt-5">
               <div>
                 <AiFillPhone className="contact-icon" />
               </div>
@@ -100,10 +100,10 @@ const Contact = () => {
           <div
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="w-full md:ml-40 px-5 md:px-0 shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e] mt-10 "
+            className="w-full md:ml-40 px-5 md:px-0 shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e]"
           >
             <h2 className=" font-bold px-5 md:px-16 text-3xl py-7">
-              Let's Work Together
+              Let's Work <span className="text-[#268aa3]">Together</span>
             </h2>
             <form
               ref={form}
@@ -150,7 +150,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

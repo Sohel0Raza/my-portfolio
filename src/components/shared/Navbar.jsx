@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiFillHome, AiFillProject } from "react-icons/ai";
 import { MdHomeRepairService } from "react-icons/md";
 import { BiSolidContact } from "react-icons/bi";
@@ -6,57 +6,70 @@ import { GiSkills } from "react-icons/gi";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const [activeLink, setActiveLink] = useState("#home");
+  const [activeSection, setActiveSection] = useState("home");
 
-  const handleLinkClick = (link) => {
-    setActiveLink(link);
-  };
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+
+    const handleScroll = () => {
+      let scrollPosition = window.scrollY;
+      
+      sections.forEach((section) => {
+        const offsetTop = section.offsetTop - 100;
+        const offsetHeight = section.offsetHeight;
+        const sectionId = section.getAttribute("id");
+
+        if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          setActiveSection(sectionId);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <div className="fixed z-40 mt-10">
-      <div className="navigation">
+    <div className="fixed z-40 mt-10 bottom-0 md:bottom-auto">
+      <nav className="navigation">
         <ul>
-          <li className={`list ${activeLink === "#home" ? "active" : ""}`}>
-            <a href="#home" onClick={() => handleLinkClick("#home")}>
+          <li className={`list ${activeSection === "home" ? "active" : ""}`}>
+            <a href="#home">
               <span className="text">Home</span>
               <span className="icon">
                 <AiFillHome />
               </span>
             </a>
           </li>
-          <li className={`list ${activeLink === "#services" ? "active" : ""}`}>
-            <a href="#services" onClick={() => handleLinkClick("#services")}>
+          <li className={`list ${activeSection === "services" ? "active" : ""}`}>
+            <a href="#services">
               <span className="text">Service</span>
               <span className="icon">
                 <MdHomeRepairService />
               </span>
             </a>
           </li>
-          <li className={`list ${activeLink === "#skills" ? "active" : ""}`}>
-            <a href="#skills" onClick={() => handleLinkClick("#skills")}>
+          <li className={`list ${activeSection === "skills" ? "active" : ""}`}>
+            <a href="#skills">
               <span className="icon">
                 <GiSkills />
               </span>
               <span className="text">Skill</span>
             </a>
           </li>
-          <li className={`list ${activeLink === "#projects" ? "active" : ""}`}>
-            <a href="#projects" onClick={() => handleLinkClick("#projects")}>
+          <li className={`list ${activeSection === "projects" ? "active" : ""}`}>
+            <a href="#projects">
               <span className="text">Project</span>
               <span className="icon">
                 <AiFillProject />
               </span>
             </a>
           </li>
-          <li
-            className={`list ${
-              activeLink === "#contactSection" ? "active" : ""
-            }`}
-          >
-            <a
-              href="#contactSection"
-              onClick={() => handleLinkClick("#contactSection")}
-            >
+          <li className={`list ${activeSection === "contactSection" ? "active" : ""}`}>
+            <a href="#contactSection">
               <span className="text">Contact</span>
               <span className="icon">
                 <BiSolidContact />
@@ -65,27 +78,9 @@ const Navbar = () => {
           </li>
           <div className="indicator"></div>
         </ul>
-      </div>
+      </nav>
     </div>
   );
 };
 
 export default Navbar;
-
-// import { IoMoon } from "react-icons/io5";
-// import { FiSun } from "react-icons/fi";
-// const [dark, setDark] = useState(false);
-// const darkModeHandler = () => {
-//   setDark(!dark);
-//   document.body.classList.toggle("dark");
-// };
-// <p className="text-2xl md:mt-6">
-//       <button onClick={darkModeHandler}>
-//         <span data-tip="Dark" className="tooltip">
-//           {dark && <IoMoon className="myIcon" />}
-//         </span>
-//         <span data-tip="Light" className="tooltip">
-//           {!dark && <FiSun className="myIcon" />}
-//         </span>
-//       </button>
-//     </p>
