@@ -98,7 +98,7 @@ const Contact = () => {
               onSubmit={sendEmail}
               className=" pb-5 px-5 md:px-16 rounded-md "
             >
-              <Fade cascade damping={0.2}>
+              <Fade cascade damping={0.2} delay={500}>
                 <div className="form-control relative my-5">
                   <input type="text" name="name" required className="myInput" />
                   <span className="myLabel">Your Name</span>

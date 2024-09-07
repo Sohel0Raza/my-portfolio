@@ -1,13 +1,14 @@
-import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
-import Aos from "aos";
 import { getSkills } from "../../hooks/useSkill";
 import SkillCard from "../cards/skillCard";
 import Title from "../utils/Title";
 import { Fade, Zoom } from "react-awesome-reveal";
+import { RingLoader } from "react-spinners";
 
 const Skills = () => {
-  const [skills, setSkills] = useState();
+  const [skills, setSkills] = useState([]);
+  const [loading, setLoading] = useState(true);
+ const color = "#268aa3"
   const frontendSkill = skills?.filter(
     (skill) => skill.techTecnology == "Frontend"
   );
@@ -15,13 +16,26 @@ const Skills = () => {
     (skill) => skill.techTecnology == "Backend"
   );
   const toolSkill = skills?.filter((skill) => skill.techTecnology == "Tool");
-  useEffect(() => {
-    Aos.init();
 
-    getSkills()
-      .then((data) => setSkills(data))
-      .catch((e) => console.log(e));
+  useEffect(() => {
+    const fetchSkills = async () => {
+      try {
+        setLoading(true);
+        const data = await getSkills();
+        setSkills(data);
+        setLoading(false);
+      } catch (e) {
+        console.error(e);
+        setLoading(false);
+      }
+    };
+
+    fetchSkills();
   }, []);
+
+  if (loading) {
+    return <RingLoader className="h-11 w-11 mx-auto my-48 " color={color} />
+  }
 
   return (
     <section id="skills">

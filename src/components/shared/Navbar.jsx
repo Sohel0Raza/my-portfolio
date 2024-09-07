@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { AiFillHome, AiFillProject } from "react-icons/ai";
 import { MdHomeRepairService } from "react-icons/md";
 import { BiSolidContact } from "react-icons/bi";
