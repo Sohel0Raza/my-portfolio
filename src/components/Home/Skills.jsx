@@ -2,95 +2,93 @@ import { useEffect, useState } from "react";
 import { getSkills } from "../../hooks/useSkill";
 import SkillCard from "../cards/skillCard";
 import Title from "../utils/Title";
-import { Fade, Zoom } from "react-awesome-reveal";
-import { RingLoader } from "react-spinners";
+import { Fade } from "react-awesome-reveal";
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
-  const [loading, setLoading] = useState(true);
- const color = "#268aa3"
-  const frontendSkill = skills?.filter(
-    (skill) => skill.techTecnology == "Frontend"
-  );
-  const backendSkill = skills?.filter(
-    (skill) => skill.techTecnology == "Backend"
-  );
-  const toolSkill = skills?.filter((skill) => skill.techTecnology == "Tool");
+  const [filteredSkills, setFilteredSkills] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        setLoading(true);
         const data = await getSkills();
         setSkills(data);
-        setLoading(false);
+        setFilteredSkills(data);
       } catch (e) {
         console.error(e);
-        setLoading(false);
       }
     };
 
     fetchSkills();
   }, []);
 
-  if (loading) {
-    return <RingLoader className="h-11 w-11 mx-auto my-48 " color={color} />
-  }
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+    if (category === "All") {
+      setFilteredSkills(skills);
+    } else {
+      const filtered = skills.filter(
+        (skill) => skill.techTecnology === category
+      );
+      setFilteredSkills(filtered);
+    }
+  };
 
   return (
     <section id="skills">
       <Title heading={"Summary"} subHeading={"My Skill"}></Title>
       <div className="w-full">
-        <h2 className=" font-bold text-xl text-[#268aa3] pb-2 md:px-0">
-          Front-end
-        </h2>
-        <div className="grid grid-cols-3 md:grid-cols-7 gap-x-7 gap-y-3  mb-10 px-10 md:px-0">
-          {frontendSkill?.map((skill, index) => (
+        <nav>
+          <ul className="flex md:w-1/4 bg-[#181A1E] space-x-4 justify-center p-3 mx-auto mb-7 rounded-full shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e]">
+            <li
+              onClick={() => handleCategoryChange("All")}
+              className={`cursor-pointer ${
+                selectedCategory === "All" ? "font-bold text-[#268aa3]" : ""
+              }`}
+            >
+              All
+            </li>
+            <li
+              onClick={() => handleCategoryChange("Frontend")}
+              className={`cursor-pointer ${
+                selectedCategory === "Frontend"
+                  ? "font-bold text-[#268aa3]"
+                  : ""
+              }`}
+            >
+              Frontend
+            </li>
+            <li
+              onClick={() => handleCategoryChange("Backend")}
+              className={`cursor-pointer ${
+                selectedCategory === "Backend" ? "font-bold text-[#268aa3]" : ""
+              }`}
+            >
+              Backend
+            </li>
+            <li
+              onClick={() => handleCategoryChange("Tool")}
+              className={`cursor-pointer ${
+                selectedCategory === "Tool" ? "font-bold text-[#268aa3]" : ""
+              }`}
+            >
+              Tools
+            </li>
+          </ul>
+        </nav>
+
+        <div className="grid grid-cols-3 md:grid-cols-7 gap-x-7 gap-y-3 mb-5 px-10 md:px-0">
+          {filteredSkills?.map((skill, index) => (
             <Fade
+              key={`${selectedCategory}-${skill._id}`}
               triggerOnce={true}
-              key={skill._id}
               cascade={false}
               direction="up"
-              delay={index * 200}
+              delay={index * 100}
             >
               <SkillCard skill={skill}></SkillCard>
             </Fade>
-          ))}
-        </div>
-      </div>
-      <div className="w-full">
-        <h2 className=" font-bold text-xl text-[#268aa3] pb-2 md:px-0">
-          Backend
-        </h2>
-        <div className="grid grid-cols-3 md:grid-cols-7 gap-x-7 gap-y-3  mb-10 px-10 md:px-0">
-          {backendSkill?.map((skill, index) => (
-            <Fade
-              triggerOnce={true}
-              key={skill._id}
-              cascade={false}
-              direction="down"
-              delay={index * 200}
-            >
-              <SkillCard skill={skill}></SkillCard>
-            </Fade>
-          ))}
-        </div>
-      </div>
-      <div className="w-full">
-        <h2 className="w-full font-bold text-xl pb-2 md:px-0 text-[#268aa3]">
-          Tools
-        </h2>
-        <div className="grid grid-cols-3 md:grid-cols-7 gap-x-7 gap-y-3  mb-10 px-10 md:px-0">
-          {toolSkill?.map((skill, index) => (
-            <Zoom
-              triggerOnce={true}
-              key={skill._id}
-              cascade={false}
-              direction="right"
-              delay={index * 200}
-            >
-              <SkillCard skill={skill}></SkillCard>
-            </Zoom>
           ))}
         </div>
       </div>

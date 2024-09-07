@@ -19,10 +19,10 @@ const Banner = () => {
       className="md:h-screen mx-auto md:flex md:justify-between md:items-center bg-[#212428]"
     >
       <Scroll></Scroll>
-      <div className="md:w-1/2 py-10 px-10 md:px-0 md:pb-10 md:-ml-[100px]">
+      <div className="md:w-1/2 py-5 px-10 md:px-0 md:pb-10 md:-ml-[100px]">
         <Fade direction="down">
-          <h2 className="text-3xl md:text-5xl font-semibold pb-2 md:mt-10">
-            <span className="text-neutral">Hi, I'm</span>{" "}
+          <h2 className="text-3xl md:text-5xl font-bold pb-2 md:mt-10">
+            <span className="text-neutral">Hi, I'm </span>
             <span className="textGD">Sohel Raza</span>
           </h2>
           <div className="w-full">

@@ -12,7 +12,7 @@ const MyProjects = () => {
   const [flip2, setFlip2] = useState(false);
   const [flip3, setFlip3] = useState(false);
   return (
-    <section id="projects" className="w-full my-10 py-5">
+    <section id="projects" className="w-full md:my-10 py-5">
      
       <Title heading={"Portfolio"} subHeading={"My Work"}></Title>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

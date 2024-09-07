@@ -31,7 +31,7 @@ const Contact = () => {
   };
   return (
     <section id="contactSection">
-      <div className="w-full mt-14 py-5">
+      <div className="w-full md:mt-14 py-5">
         <Title heading={"Contact"} subHeading={"Get in Touch"}></Title>
         <div className="md:flex justify-between">
           <Fade delay={100} direction="left">
