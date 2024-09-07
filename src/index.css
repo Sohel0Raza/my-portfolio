@@ -9,14 +9,6 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.active {
-  @apply tracking-wide text-green-700 transition-colors duration-200;
-}
-
-.default {
-  @apply text-white transition-colors duration-200 hover:text-gray-500;
-}
-
 .btn-primary {
   @apply font-medium transition duration-200 shadow-inner shadow-black dark:shadow-white  my-3 md:mb-0 px-3 py-1 md:px-4 md:py-2 rounded hover:text-white bg-primary active:bg-[#2e0c0f] hover:bg-[#d339a5] text-white hover:border-transparent;
 }
@@ -39,6 +31,9 @@ body {
 
 .btn-live {
   @apply text-[#db64bb] font-normal shadow-inner shadow-black dark:shadow-white  rounded-full px-2 hover:bg-slate-100 hover:border-transparent;
+}
+.textGD{
+  @apply bg-gradient-to-r from-[#FF014F] via-[#c22424] to-[#c73b65] inline-block text-transparent bg-clip-text
 }
 
 .service-card {

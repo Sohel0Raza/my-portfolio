@@ -2,22 +2,16 @@ import { MdOutlineDesignServices } from "react-icons/md";
 import { BiBug } from "react-icons/bi";
 import { FaCode } from "react-icons/fa";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 import Title from "../utils/Title";
+import { JackInTheBox, Slide } from "react-awesome-reveal";
 
 const MyService = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
   return (
     <section id="services" className="w-full py-5">
-     
       <Title heading={"Services"} subHeading={"What I Do?"}></Title>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <div data-aos="fade-right" data-aos-duration="1000">
+        <Slide direction="right">
           <div className="service-card">
             <FaCode className="mx-auto text-6xl p-2 text-primary  rounded-full " />
             <h4 className="text-2xl font-semibold p-2 mb-3">Web Development</h4>
@@ -29,8 +23,8 @@ const MyService = () => {
               requirements.
             </p>
           </div>
-        </div>
-        <div data-aos="fade-up" data-aos-duration="1000">
+        </Slide>
+        <JackInTheBox duration={2000}>
           <div className="service-card md:h-[352px]">
             <MdOutlineDesignServices className="mx-auto text-6xl p-2 text-primary  rounded-full " />
             <h4 className="text-2xl font-semibold p-2 mb-3">
@@ -43,8 +37,8 @@ const MyService = () => {
               use.
             </p>
           </div>
-        </div>
-        <div data-aos="fade-left" data-aos-duration="1000">
+        </JackInTheBox>
+        <Slide direction="left">
           <div className="service-card">
             <BiBug className="mx-auto text-6xl p-2 text-primary  rounded-full " />
             <h4 className="text-2xl font-semibold p-2 mb-3">Bug Fixing</h4>
@@ -56,7 +50,7 @@ const MyService = () => {
               experience and hinder performance.
             </p>
           </div>
-        </div>
+        </Slide>
       </div>
     </section>
   );

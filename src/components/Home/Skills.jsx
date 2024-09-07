@@ -4,6 +4,7 @@ import Aos from "aos";
 import { getSkills } from "../../hooks/useSkill";
 import SkillCard from "../cards/skillCard";
 import Title from "../utils/Title";
+import { Fade, Zoom } from "react-awesome-reveal";
 
 const Skills = () => {
   const [skills, setSkills] = useState();
@@ -24,14 +25,22 @@ const Skills = () => {
 
   return (
     <section id="skills">
-     <Title heading={"Summary"} subHeading={"My Skill"}></Title>
+      <Title heading={"Summary"} subHeading={"My Skill"}></Title>
       <div className="w-full">
         <h2 className=" font-bold text-xl text-[#268aa3] pb-2 md:px-0">
           Front-end
         </h2>
         <div className="grid grid-cols-3 md:grid-cols-7 gap-x-7 gap-y-3  mb-10 px-10 md:px-0">
-          {frontendSkill?.map((skill) => (
-            <SkillCard key={skill._id} skill={skill}></SkillCard>
+          {frontendSkill?.map((skill, index) => (
+            <Fade
+              triggerOnce={true}
+              key={skill._id}
+              cascade={false}
+              direction="up"
+              delay={index * 200}
+            >
+              <SkillCard skill={skill}></SkillCard>
+            </Fade>
           ))}
         </div>
       </div>
@@ -40,8 +49,16 @@ const Skills = () => {
           Backend
         </h2>
         <div className="grid grid-cols-3 md:grid-cols-7 gap-x-7 gap-y-3  mb-10 px-10 md:px-0">
-          {backendSkill?.map((skill) => (
-            <SkillCard key={skill._id} skill={skill}></SkillCard>
+          {backendSkill?.map((skill, index) => (
+            <Fade
+              triggerOnce={true}
+              key={skill._id}
+              cascade={false}
+              direction="down"
+              delay={index * 200}
+            >
+              <SkillCard skill={skill}></SkillCard>
+            </Fade>
           ))}
         </div>
       </div>
@@ -50,8 +67,16 @@ const Skills = () => {
           Tools
         </h2>
         <div className="grid grid-cols-3 md:grid-cols-7 gap-x-7 gap-y-3  mb-10 px-10 md:px-0">
-          {toolSkill?.map((skill) => (
-            <SkillCard key={skill._id} skill={skill}></SkillCard>
+          {toolSkill?.map((skill, index) => (
+            <Zoom
+              triggerOnce={true}
+              key={skill._id}
+              cascade={false}
+              direction="right"
+              delay={index * 200}
+            >
+              <SkillCard skill={skill}></SkillCard>
+            </Zoom>
           ))}
         </div>
       </div>
