@@ -2,21 +2,26 @@ import { useEffect, useState } from "react";
 import { getSkills } from "../../hooks/useSkill";
 import SkillCard from "../cards/skillCard";
 import Title from "../utils/Title";
-import { Fade } from "react-awesome-reveal";
+import { Fade, Zoom } from "react-awesome-reveal";
+import { HashLoader } from "react-spinners";
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [filteredSkills, setFilteredSkills] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   useEffect(() => {
     const fetchSkills = async () => {
       try {
+        setIsLoading(true);
         const data = await getSkills();
+        setIsLoading(false);
         setSkills(data);
         setFilteredSkills(data);
       } catch (e) {
         console.error(e);
+        setIsLoading(false);
       }
     };
 
@@ -40,7 +45,7 @@ const Skills = () => {
       <Title heading={"Summary"} subHeading={"My Skill"}></Title>
       <div className="w-full">
         <nav>
-          <ul className="flex md:w-1/4 bg-[#181A1E] space-x-4 justify-center p-3 mx-auto mb-7 rounded-full shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e]">
+          <ul className="flex mx-auto md:w-1/4 bg-[#181A1E] space-x-4 justify-center p-3 mb-7 rounded-full shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e]">
             <li
               onClick={() => handleCategoryChange("All")}
               className={`cursor-pointer ${
@@ -77,20 +82,28 @@ const Skills = () => {
             </li>
           </ul>
         </nav>
-
-        <div className="grid grid-cols-3 md:grid-cols-7 gap-x-7 gap-y-3 mb-5 px-10 md:px-0">
-          {filteredSkills?.map((skill, index) => (
-            <Fade
-              key={`${selectedCategory}-${skill._id}`}
-              triggerOnce={true}
-              cascade={false}
-              direction="up"
-              delay={index * 100}
-            >
-              <SkillCard skill={skill}></SkillCard>
-            </Fade>
-          ))}
-        </div>
+        {isLoading ? (
+          <>
+            <HashLoader className="mx-auto my-32" size="70" color="#268aa3"/>
+          </>
+        ) : (
+          <>
+            <div className="grid grid-cols-3 md:grid-cols-7 gap-x-7 gap-y-3 mb-5 px-10 md:px-0">
+              {filteredSkills?.map((skill, index) => (
+                <Zoom
+                  key={`${selectedCategory}-${skill._id}`}
+                  triggerOnce={true}
+                  cascade={true}
+                  direction="up"
+                  duration={500}
+                  delay={index * 100}
+                >
+                  <SkillCard skill={skill} isLodaing={isLoading}></SkillCard>
+                </Zoom>
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </section>
   );

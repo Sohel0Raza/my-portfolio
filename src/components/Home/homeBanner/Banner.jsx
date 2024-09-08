@@ -19,7 +19,7 @@ const Banner = () => {
       className="md:h-screen mx-auto md:flex md:justify-between md:items-center bg-[#212428]"
     >
       <Scroll></Scroll>
-      <div className="md:w-1/2 py-5 px-10 md:px-0 md:pb-10 md:-ml-[100px]">
+      <div className="md:w-1/2 py-5 px-10 md:px-0 md:pb-5 md:-ml-[100px]">
         <Fade direction="down">
           <h2 className="text-3xl md:text-5xl font-bold pb-2 md:mt-10">
             <span className="text-neutral">Hi, I'm </span>
@@ -67,7 +67,7 @@ const Banner = () => {
       </div>
 
       <div className="md:w-2/5 md:pl-5">
-        <Zoom>
+        <Zoom triggerOnce={true}>
           <div className="imgbox md:ml-7">
             <div className="content">
               <img

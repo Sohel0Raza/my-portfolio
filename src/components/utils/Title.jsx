@@ -7,7 +7,7 @@ const Title = ({ heading, subHeading }) => {
         {heading}
       </h2>
         <p className="absolute top-[38%] left-[35%] md:top-[43%] md:left-[40%] font-bold text-xl md:text-5xl text-[#268aa3]">
-      <Fade direction="up" triggerOnce={true}>
+      <Fade direction="up">
           {subHeading}
       </Fade>
         </p>

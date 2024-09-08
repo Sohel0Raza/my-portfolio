@@ -35,7 +35,7 @@ const Contact = () => {
         <Title heading={"Contact"} subHeading={"Get in Touch"}></Title>
         <div className="md:flex justify-between">
           <Fade delay={100} direction="left">
-            <div className="px-10 md:px-0">
+            <div className="px-10 md:px-0 ">
               <p className="pb-7">
                 Let's talk how I can help you to grow your business. I
                 appreciate any kind of suggestions or feedback.

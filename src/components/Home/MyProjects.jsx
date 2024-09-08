@@ -15,6 +15,7 @@ const MyProjects = () => {
     <section id="projects" className="w-full md:my-10 py-5">
      
       <Title heading={"Portfolio"} subHeading={"My Work"}></Title>
+      
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div className="card shadow-2xl shadow-[#557A08] mx-8 md:mx-0">
           <ReactCardFlip isFlipped={flip1} flipDirection="vertical">

@@ -7,7 +7,7 @@ import { JackInTheBox, Slide } from "react-awesome-reveal";
 
 const MyService = () => {
   return (
-    <section id="services" className="w-full py-5">
+    <section id="services" className="w-full py-5 md:-mt-10">
       <Title heading={"Services"} subHeading={"What I Do?"}></Title>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
