@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useHttp } from "../../hooks/useHttp";
 import SkillCard from "../cards/skillCard";
 import Title from "../utils/Title";
-import { Zoom } from "react-awesome-reveal";
+import { Slide, Zoom } from "react-awesome-reveal";
 import { HashLoader } from "react-spinners";
 
 const Skills = () => {
@@ -90,17 +90,14 @@ const Skills = () => {
         ) : (
           <>
             <div className="grid grid-cols-3 md:grid-cols-7 gap-x-7 gap-y-3 mb-5 px-10 md:px-0">
-              {filteredSkills?.map((skill, index) => (
-                <Zoom
+              {filteredSkills?.map((skill) => (
+                <Slide
                   key={`${selectedCategory}-${skill._id}`}
                   triggerOnce={true}
-                  cascade={true}
                   direction="up"
-                  duration={500}
-                  delay={index * 100}
                 >
                   <SkillCard skill={skill} isLodaing={isLoading}></SkillCard>
-                </Zoom>
+                </Slide>
               ))}
             </div>
           </>

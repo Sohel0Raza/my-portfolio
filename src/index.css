@@ -68,7 +68,7 @@ body {
 .myLiveLink {
   @apply rounded shadow-inner font-semibold shadow-black px-2 transition-all duration-700 ease-in-out hover:-translate-y-1;
 
-  background: linear-gradient(to left, #ff014f 50%, #212428 50%) right;
+  background: linear-gradient(to left, #086a83 50%, #212428 50%) right;
   background-size: 200%;
 }
 

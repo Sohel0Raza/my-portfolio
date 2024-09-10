@@ -6,7 +6,7 @@ const ProjectCard = ({ project, onOpenModal }) => {
 
   return (
     <div>
-      <div className="project-card">
+      <div className="project-card md:h-[410px]">
         <div>
           <div className="mx-auto h-[230px] py-2 px-1">
             <img
