@@ -18,17 +18,6 @@ body {
   @apply font-medium transition duration-200 shadow-inner shadow-black dark:shadow-white  my-3 md:mb-0 px-3 py-1 md:px-4 md:py-2 rounded hover:bg-[#1d3557] active:bg-[#5d6ac2] hover:border-transparent  hover:text-white;
 }
 
-.btn-client {
-  @apply text-[#838BD6] font-normal shadow-inner shadow-black dark:shadow-white  rounded-full px-2 hover:bg-slate-100 hover:border-transparent;
-}
-
-.btn-server {
-  @apply text-[#a861df] font-normal shadow-inner shadow-black dark:shadow-white  rounded-full px-2 hover:bg-zinc-100 hover:border-transparent;
-}
-
-.btn-live {
-  @apply text-[#db64bb] font-normal shadow-inner shadow-black dark:shadow-white  rounded-full px-2 hover:bg-slate-100 hover:border-transparent;
-}
 .textGD{
   @apply bg-gradient-to-r from-[#FF014F] via-[#c22424] to-[#c73b65] inline-block text-transparent bg-clip-text
 }
@@ -53,13 +42,6 @@ body {
   padding: 0 10px;
   background: #212428;
 }
-.myIcon {
-  @apply rounded-full text-5xl shadow-inner shadow-black p-2 transition-all duration-700 ease-in-out hover:-translate-y-1;
-
-  background: linear-gradient(to left, #212428 50%, #ff014f 50%) right;
-  background-size: 200%;
-}
-
 
 .myIcon {
   @apply rounded-full text-4xl shadow-inner shadow-black p-2 transition-all duration-700 ease-in-out hover:-translate-y-1;
@@ -69,6 +51,28 @@ body {
 }
 
 .myIcon:hover {
+  background-position: left;
+  @apply bg-primary;
+}
+.myLink {
+  @apply rounded shadow-inner font-semibold shadow-black px-2 transition-all duration-700 ease-in-out hover:-translate-y-1;
+
+  background: linear-gradient(to left, #212428 50%, #086a83 50%) right;
+  background-size: 200%;
+}
+
+.myLink:hover {
+  background-position: left;
+  @apply bg-primary;
+}
+.myLiveLink {
+  @apply rounded shadow-inner font-semibold shadow-black px-2 transition-all duration-700 ease-in-out hover:-translate-y-1;
+
+  background: linear-gradient(to left, #ff014f 50%, #212428 50%) right;
+  background-size: 200%;
+}
+
+.myLiveLink:hover {
   background-position: left;
   @apply bg-primary;
 }
