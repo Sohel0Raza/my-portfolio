@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { getSkills } from "../../hooks/useSkill";
+import { useHttp } from "../../hooks/useHttp";
 import SkillCard from "../cards/skillCard";
 import Title from "../utils/Title";
-import { Fade, Zoom } from "react-awesome-reveal";
+import { Zoom } from "react-awesome-reveal";
 import { HashLoader } from "react-spinners";
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [filteredSkills, setFilteredSkills] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -15,7 +15,8 @@ const Skills = () => {
     const fetchSkills = async () => {
       try {
         setIsLoading(true);
-        const data = await getSkills();
+        const respone = await useHttp("http://localhost:5000/api/skill");
+        const data = respone?.data
         setIsLoading(false);
         setSkills(data);
         setFilteredSkills(data);
@@ -84,7 +85,7 @@ const Skills = () => {
         </nav>
         {isLoading ? (
           <>
-            <HashLoader className="mx-auto my-32" size="70" color="#268aa3"/>
+            <HashLoader className="mx-auto my-32" size="70px" color="#268aa3" />
           </>
         ) : (
           <>

@@ -33,7 +33,7 @@ const Banner = () => {
                 1000,
                 "a Front-end Developer.",
                 1000,
-                "a Developer.",
+                "a Web Developer.",
                 1000,
               ]}
               wrapper="span"
@@ -98,3 +98,5 @@ const Banner = () => {
 };
 
 export default Banner;
+
+
