@@ -15,7 +15,7 @@ const Skills = () => {
     const fetchSkills = async () => {
       try {
         setIsLoading(true);
-        const respone = await useHttp("http://localhost:5000/api/skill");
+        const respone = await useHttp("  https://my-portfolio-server-beta-sandy.vercel.app/api/skill");
         const data = respone?.data
         setIsLoading(false);
         setSkills(data);

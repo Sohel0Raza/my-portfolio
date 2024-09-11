@@ -4,7 +4,7 @@ import { MdEmail, MdLocationOn } from "react-icons/md";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Title from "../utils/Title";
-import { Fade } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
 
 const Contact = () => {
   const form = useRef();
@@ -34,8 +34,8 @@ const Contact = () => {
       <div className="w-full md:mt-14 py-5">
         <Title heading={"Contact"} subHeading={"Get in Touch"}></Title>
         <div className="md:flex justify-between">
-          <Fade delay={100} direction="left">
-            <div className="px-10 md:px-0 ">
+          <Slide direction="left" duration={1000} triggerOnce={true}>
+            <div className="px-10 md:px-0 pb-5 ">
               <p className="pb-7">
                 Let's talk how I can help you to grow your business. I
                 appreciate any kind of suggestions or feedback.
@@ -88,8 +88,8 @@ const Contact = () => {
                 </a>
               </div>
             </div>
-          </Fade>
-          <div className="w-full md:ml-40 px-5 md:px-0 shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e]">
+          </Slide>
+          <div className="w-full md:ml-40 md:px-0 shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e]">
             <h2 className=" font-bold px-5 md:px-16 text-3xl py-7">
               Let's Work <span className="text-[#268aa3]">Together</span>
             </h2>
@@ -99,7 +99,7 @@ const Contact = () => {
               className=" pb-5 px-5 md:px-16 rounded-md "
             >
               <Fade cascade damping={0.2} delay={500}>
-                <div className="form-control relative my-5">
+                <div className="form-control relative md:my-5">
                   <input type="text" name="name" required className="myInput" />
                   <span className="myLabel">Your Name</span>
                 </div>
