@@ -6,7 +6,7 @@ const Title = ({ heading, subHeading }) => {
       <h2 className="uppercase font-bold text-4xl md:text-9xl opacity-5 text-neutral">
         {heading}
       </h2>
-        <p className="absolute top-[38%] left-[35%] md:top-[43%] md:left-[40%] font-bold text-xl md:text-5xl text-[#268aa3]">
+        <p className="absolute top-[38%] left-[40%] md:top-[43%] md:left-[40%] font-bold text-base md:text-5xl text-[#268aa3]">
       <Fade direction="up">
           {subHeading}
       </Fade>
